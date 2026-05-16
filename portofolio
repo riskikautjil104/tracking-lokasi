@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizki Hi Ibrahim | Full-Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .code-font {
+            font-family: 'Fira Code', monospace;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at top right, #dbeafe 0%, transparent 40%),
+                        radial-gradient(circle at bottom left, #e0e7ff 0%, transparent 40%);
+        }
+
+        .experience-border {
+            position: relative;
+        }
+
+        .experience-border::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e2e8f0;
+        }
+
+        .experience-dot {
+            position: absolute;
+            left: -25px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #2563eb;
+            border: 2px solid white;
+        }
+
+        .github-stats-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigasi -->
+    <nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <span class="text-xl font-extrabold tracking-tight text-blue-600">RIZKI<span class="text-slate-900">.DEV</span></span>
+            <div class="hidden md:flex gap-8 text-sm font-semibold text-slate-600">
+                <a href="#beranda" class="hover:text-blue-600 transition">Beranda</a>
+                <a href="#pengalaman" class="hover:text-blue-600 transition">Pengalaman</a>
+                <a href="#keahlian" class="hover:text-blue-600 transition">Keahlian</a>
+                <a href="#prestasi" class="hover:text-blue-600 transition">Prestasi</a>
+            </div>
+            <a href="#kontak" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition">Hubungi</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="pt-32 pb-20 hero-gradient min-h-screen flex items-center">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1">
+                <div class="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-bold mb-6 border border-blue-100">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                    </span>
+                    💫 About Me: Hello i'm Rizki Mobile Dev
+                </div>
+                <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+                    Rizki Hi Ibrahim, <span class="text-blue-600 font-medium text-4xl">S.Kom</span>
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 leading-relaxed max-w-lg">
+                    Software Programmer yang fokus pada pengembangan aplikasi mobile & web. Terbiasa membangun solusi fungsional untuk sistem informasi publik dan pemerintahan.
+                </p>
+                <div class="flex flex-wrap gap-4 mb-10">
+                    <a href="https://www.linkedin.com/in/rizki-hi-ibrahim-801929295/" target="_blank" class="flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-xl hover:bg-slate-800 transition shadow-lg shadow-slate-200">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/riskikautjil104" target="_blank" class="flex items-center gap-2 bg-white text-slate-900 border border-slate-200 px-6 py-3 rounded-xl hover:bg-slate-50 transition">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+
+                <!-- GitHub Tech Stack Indicators -->
+                <div class="pt-6 border-t border-slate-200">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">💻 Tech Stack:</p>
+                    <div class="flex flex-wrap gap-3">
+                        <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter" class="h-8">
+                        <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart" class="h-8">
+                        <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel" class="h-8">
+                        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" class="h-8">
+                        <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" class="h-8">
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 flex justify-center">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-blue-100 rounded-full blur-2xl opacity-60"></div>
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl bg-slate-200 overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Rizki" alt="Rizki Hi Ibrahim" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Stats Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="glass-card p-8 rounded-3xl border border-slate-100 shadow-sm">
+                <div class="flex items-center gap-3 mb-8">
+                    <i class="fab fa-github text-2xl"></i>
+                    <h2 class="text-xl font-bold">📊 GitHub Stats</h2>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+                    <div class="github-stats-card">
+                        <img src="https://github-readme-stats.vercel.app/api?username=riskikautjil104&show_icons=true&theme=transparent&hide_border=true&title_color=2563eb&icon_color=2563eb&text_color=475569" alt="Rizki's GitHub Stats">
+                    </div>
+                    <div class="github-stats-card">
+                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=riskikautjil104&layout=compact&theme=transparent&hide_border=true&title_color=2563eb&text_color=475569" alt="Top Languages">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pengalaman Kerja & Proyek -->
+    <section id="pengalaman" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-extrabold mb-16 text-center">Pengalaman & Portofolio</h2>
+            
+            <div class="space-y-12 ml-6">
+                
+                <!-- PT Kemala Inti Solusi -->
+                <div class="experience-border group">
+                    <div class="experience-dot bg-green-500"></div>
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition">Programmer SIMRS</h3>
+                            <p class="text-blue-600 font-semibold">PT Kemala Inti Solusi · Kontrak</p>
+                        </div>
+                        <span class="text-sm font-medium text-slate-400">Jan 2026 - Saat Ini</span>
+                    </div>
+                    <p class="text-slate-600 text-sm mb-3">Bekerja secara jarak jauh (Remote) berfokus pada pengembangan dan pemeliharaan Sistem Informasi Manajemen Rumah Sakit (SIMRS).</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[10px] bg-slate-100 px-2 py-1 rounded font-bold">LARAVEL</span>
+                        <span class="text-[10px] bg-slate-100 px-2 py-1 rounded font-bold">FULL-STACK DEVELOPMENT</span>
+                        <span class="text-[10px] bg-slate-100 px-2 py-1 rounded font-bold">SQL</span>
+                    </div>
+                </div>
+
+                <!-- Pekerja Lepas (Freelance) -->
+                <div class="experience-border group">
+                    <div class="experience-dot"></div>
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition">Software Programmer (Freelance)</h3>
+                            <p class="text-blue-600 font-semibold">Pekerja Lepas</p>
+                        </div>
+                        <span class="text-sm font-medium text-slate-400">Jan 2023 - Saat Ini</span>
+                    </div>
+                    <p class="text-slate-600 text-sm mb-4">Fokus pada pengembangan aplikasi mobile dan web untuk proyek akademik dan sistem pemerintahan.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+                            <h4 class="font-bold text-xs text-slate-800">Sistem Pemerintahan</h4>
+                            <ul class="text-[11px] text-slate-500 mt-1">
+                                <li>• Web SIFEDORA – BAPPEDA Maluku Utara</li>
+                                <li>• Web E-Litbang Morotai</li>
+                                <li>• Aplikasi Mobile Terdepan – BAPPEDA</li>
+                            </ul>
+                        </div>
+                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+                            <h4 class="font-bold text-xs text-slate-800">Proyek Lainnya</h4>
+                            <ul class="text-[11px] text-slate-500 mt-1">
+                                <li>• Mobile POS Terminal</li>
+                                <li>• Aplikasi Mobile Tugas Akhir</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Radya Labs -->
+                <div class="experience-border group">
+                    <div class="experience-dot"></div>
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition">Mobile Developer (Magang)</h3>
+                            <p class="text-blue-600 font-semibold">Radya Labs Teknologi</p>
+                        </div>
+                        <span class="text-sm font-medium text-slate-400">Sep 2023 - Feb 2024</span>
+                    </div>
+                    <ul class="text-slate-600 text-sm space-y-2 list-disc pl-4">
+                        <li>API Testing, pengembangan aplikasi menggunakan Flutter, dan kolaborasi tim.</li>
+                    </ul>
+                </div>
+
+                <!-- Asisten Praktikum -->
+                <div class="experience-border group">
+                    <div class="experience-dot"></div>
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition">Asisten Praktikum</h3>
+                            <p class="text-blue-600 font-semibold">Universitas Khairun Ternate</p>
+                        </div>
+                        <span class="text-sm font-medium text-slate-400">2022 - 2025</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-2">
+                        <span class="text-[11px] bg-slate-100 px-3 py-1 rounded-full font-medium">Algoritma & Struktur Data</span>
+                        <span class="text-[11px] bg-slate-100 px-3 py-1 rounded-full font-medium">Python</span>
+                        <span class="text-[11px] bg-slate-100 px-3 py-1 rounded-full font-medium">Java OOP</span>
+                        <span class="text-[11px] bg-slate-100 px-3 py-1 rounded-full font-medium">Mobile Dev (Dart)</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Keahlian -->
+    <section id="keahlian" class="py-24 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-extrabold mb-16 text-center">Keahlian Lengkap</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-6 bg-white rounded-3xl border border-slate-200 shadow-sm">
+                    <i class="fas fa-database text-blue-600 text-2xl mb-4"></i>
+                    <h4 class="font-bold text-sm mb-2">Backend & DB</h4>
+                    <p class="text-[10px] text-slate-500 uppercase font-bold">SQL, MySQL, Laravel, CodeIgniter, Firebase</p>
+                </div>
+                <div class="p-6 bg-white rounded-3xl border border-slate-200 shadow-sm">
+                    <i class="fas fa-mobile-alt text-blue-600 text-2xl mb-4"></i>
+                    <h4 class="font-bold text-sm mb-2">Mobile Development</h4>
+                    <p class="text-[10px] text-slate-500 uppercase font-bold">Flutter, Dart, Mobile App Dev, Postman API</p>
+                </div>
+                <div class="p-6 bg-white rounded-3xl border border-slate-200 shadow-sm">
+                    <i class="fas fa-code text-blue-600 text-2xl mb-4"></i>
+                    <h4 class="font-bold text-sm mb-2">Programming</h4>
+                    <p class="text-[10px] text-slate-500 uppercase font-bold">Python, Java, C++, Django, Flask</p>
+                </div>
+                <div class="p-6 bg-white rounded-3xl border border-slate-200 shadow-sm">
+                    <i class="fas fa-user-friends text-blue-600 text-2xl mb-4"></i>
+                    <h4 class="font-bold text-sm mb-2">Soft Skills</h4>
+                    <p class="text-[10px] text-slate-500 uppercase font-bold">Leadership, Teamwork, Manajemen Tim</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prestasi -->
+    <section id="prestasi" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-extrabold mb-16">Prestasi & Kompetisi</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
+                    <h4 class="text-blue-400 font-bold mb-2">Peserta Gemastik 2024</h4>
+                    <p class="text-sm opacity-70">Bidang Cyber Security (Nasional).</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
+                    <h4 class="text-blue-400 font-bold mb-2">Ketua Tim Gemastik 2023</h4>
+                    <p class="text-sm opacity-70">Bidang Cyber Security (Nasional).</p>
+                </div>
+                <div class="bg-blue-600 p-8 rounded-3xl shadow-xl shadow-blue-900/40">
+                    <h4 class="font-bold mb-2">Juara 1 CTF Competition</h4>
+                    <p class="text-sm">Aikom Ternate - Cyber Security & Forensics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="py-20 bg-white border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold mb-8 italic code-font">"Keep Building, Keep Learning"</h2>
+            <div class="flex justify-center gap-6">
+                <a href="https://www.linkedin.com/in/rizki-hi-ibrahim-801929295/" target="_blank" class="text-slate-400 hover:text-blue-600 transition text-2xl"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/riskikautjil104" target="_blank" class="text-slate-400 hover:text-slate-900 transition text-2xl"><i class="fab fa-github"></i></a>
+                <a href="https://medium.com/@ucupKrucup" target="_blank" class="text-slate-400 hover:text-black transition text-2xl"><i class="fab fa-medium"></i></a>
+            </div>
+            <p class="text-xs text-slate-400 mt-8">&copy; 2026 Rizki Hi Ibrahim, S.Kom. Built with Tailwind & Passion.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
